@@ -55,9 +55,21 @@
 		<section class="contact-1">
 			<div id="map"></div>
 				<script src="js/maps.js"></script>
-			<!--YOU MUST REPLACE WITH YOUR OWN API KEY FOR THE MAP TO WORK-->
+			<script>
+                function initMap() {
+                    var sumpan = {lat: 59.3589873, lng: 17.9676609};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 10,
+                        center: sumpan
+                    });
+                    var marker = new google.maps.Marker({
+                        position: sumpan,
+                        map: map
+                    });
+                }
+			</script>
 			<script async defer
-				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBptaDKT_ntSoNEytCnSang5JenaNAj_Us&callback=initMap">
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuUDt2-XGm2IhT2DzF5V8riUwJEL8-fpk&callback=initMap">
 			</script>
 			<div class="container">
 				<div class="row contact-details">
